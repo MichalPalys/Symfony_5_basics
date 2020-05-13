@@ -20,12 +20,17 @@ class QuestionController
     }
 
     /**
-     * @Route(path="/questions/question-what")
+     * @Route(path="/questions/{slug}")
+     *
+     * @param $slug
      *
      * @return Response
      */
-    public function show()
+    public function show($slug)
     {
-        return new Response('Future page to show a questions!');
+        return new Response(sprintf(
+            'Future page to show a questions "%s"!',
+            ucwords(str_replace('-', ' ', $slug))
+        ));
     }
 }

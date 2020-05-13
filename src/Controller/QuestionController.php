@@ -29,8 +29,14 @@ class QuestionController extends AbstractController
      */
     public function show($slug)
     {
+        $answers = [
+            'Answer 1',
+            'Answer 2',
+            'Answer 3',
+        ];
         return $this->render('question/show.html.twig', [
-           'question' => ucwords(str_replace('-', ' ', $slug))
+           'question' => ucwords(str_replace('-', ' ', $slug)),
+            'answers' => $answers,
         ]);
     }
 }

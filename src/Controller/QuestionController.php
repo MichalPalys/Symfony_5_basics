@@ -29,9 +29,8 @@ class QuestionController extends AbstractController
      */
     public function show($slug)
     {
-        return new Response(sprintf(
-            'Future page to show a questions "%s"!',
-            ucwords(str_replace('-', ' ', $slug))
-        ));
+        return $this->render('question/show.html.twig', [
+           'question' => ucwords(str_replace('-', ' ', $slug))
+        ]);
     }
 }

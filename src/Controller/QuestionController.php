@@ -21,7 +21,7 @@ class QuestionController extends AbstractController
     }
 
     /**
-     * @Route(path="/questions/{slug}")
+     * @Route(path="/questions/{slug}", name="app_question_show")
      *
      * @param $slug
      *

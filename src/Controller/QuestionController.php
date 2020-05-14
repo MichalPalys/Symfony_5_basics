@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class QuestionController extends AbstractController
 {
     /**
-     * @Route(path="/")
+     * @Route(path="/", name="app_homepage")
      *
      * @return Response
      */
